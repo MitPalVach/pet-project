@@ -7,17 +7,18 @@ interface INavbarProps {
 }
 
 export const Navbar = ( { className }: INavbarProps ) => {
-	return (
-		<div className={ classNames( cls.Navbar, {}, [ className ] ) }>
-			<div className={ cls.links }>
-				<AppLink to={ '/' } theme={ EAppLinkTheme.SECONDARY } className={ cls.mainLink }>
-					Main
-				</AppLink>
-				<AppLink to={ '/about' } theme={ EAppLinkTheme.SECONDARY }>
-					About
-				</AppLink>
-			</div>
-		</div>
-	);
+
+  return (
+    <div className={ classNames( cls.Navbar, {}, [ className ] ) }>
+      <div className={ cls.links }>
+        <AppLink to={ '/' } theme={ EAppLinkTheme.SECONDARY } className={ cls.mainLink }>
+          Main
+        </AppLink>
+        <AppLink to={ '/about' } theme={ EAppLinkTheme.SECONDARY }>
+          About
+        </AppLink>
+      </div>
+    </div>
+  );
 };
 
