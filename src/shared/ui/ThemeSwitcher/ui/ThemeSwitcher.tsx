@@ -1,24 +1,24 @@
-import React, { memo } from 'react';
-import { ETheme, useTheme } from '@/app/providers/ThemeProvider';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import LightIcon from '@/widgets/assets/icons/theme-light.svg';
-import DarkIcon from '@/widgets/assets/icons/theme-dark.svg';
-import { Button, ThemeButton } from '@/shared/ui/Button/Button';
+import React from 'react';
+import { ETheme, useTheme } from 'app/providers/ThemeProvider';
+import { classNames } from 'shared/lib/classNames/classNames';
+import LightIcon from 'widgets/assets/icons/theme-light.svg';
+import DarkIcon from 'widgets/assets/icons/theme-dark.svg';
+import { Button, ThemeButton } from 'shared/ui/Button/Button';
 
 interface ThemeSwitcherProps {
 	className?: string;
 }
 
-export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
+export const ThemeSwitcher = ( ( { className }: ThemeSwitcherProps ) => {
   const { theme, toggleTheme } = useTheme();
 
   return (
     <Button
-      theme={ThemeButton.CLEAR}
-      onClick={toggleTheme}
-      className={classNames('', {}, [className])}
+      theme={ ThemeButton.CLEAR }
+      onClick={ toggleTheme }
+      className={ classNames( '', {}, [ className ] ) }
     >
-      { theme === ETheme.DARK ? <DarkIcon /> : <LightIcon /> }
+      { theme === ETheme.DARK ? <DarkIcon/> : <LightIcon/> }
     </Button>
   );
-});
+} );

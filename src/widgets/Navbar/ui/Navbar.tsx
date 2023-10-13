@@ -1,6 +1,6 @@
-import { classNames } from '@/shared/lib/classNames/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Navbar.module.scss';
-import { AppLink, EAppLinkTheme } from '@/shared/ui/AppLink/AppLink';
+import { AppLink, EAppLinkTheme } from 'shared/ui/AppLink/AppLink';
 
 interface INavbarProps {
 	className?: string;
